@@ -1,0 +1,32 @@
+import React from "react";
+import ReactDom from "react-dom";
+
+const today = new Date();
+var date =today.getHours();
+
+const root = document.getElementById("root");
+
+if (date < 12 && date < 24) {
+  ReactDom.render(
+    <div>
+      <h1 style={{ color: "red" }}> Good Morning</h1>
+    </div>,
+    root
+  );
+} else if (date >= 12 && date < 18) {
+  ReactDom.render(
+    <div>
+      <h1 style={{ color: "green" }}> Good Afternoon</h1>
+    </div>,
+    root
+  );
+} else if (date > 18 && date < 24) {
+  ReactDom.render(
+    <div>
+      <h1 style={{ color: "blue" }}> Good Evening</h1>
+    </div>,
+    root
+  );
+}
+
+//console.log(date);
